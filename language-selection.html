@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #d4f1f9, #d7e4f5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Language</h1>
+        <button class="btn" onclick="redirectToIndex('en')">English</button>
+        <button class="btn" onclick="redirectToIndex('es')">Español</button>
+        <button class="btn" onclick="redirectToIndex('ar')">العربية</button>
+        <button class="btn" onclick="redirectToIndex('zh')">中文 (简体)</button>
+        <button class="btn" onclick="redirectToIndex('fr')">Français</button>
+        <button class="btn" onclick="redirectToIndex('pt')">Português</button>
+        <button class="btn" onclick="redirectToIndex('ko')">한국어</button>
+        <button class="btn" onclick="redirectToIndex('sign')">Sign Language</button>
+    </div>
+    <script>
+        function redirectToIndex(language) {
+            // Store the selected language in localStorage or pass it as a query parameter
+            localStorage.setItem('selectedLanguage', language);
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
